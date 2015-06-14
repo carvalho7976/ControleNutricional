@@ -10,9 +10,10 @@ namespace ControleNutricionalService.Models
 {
     public class NutricaoContext : DbContext
     {
-        public NutricaoContext(): base()
+        public NutricaoContext()
+            : base()
         {
-
+            Configuration.ProxyCreationEnabled = false;
         }
 
         public DbSet<Alimento> Alimentos { get; set; }
@@ -27,7 +28,7 @@ namespace ControleNutricionalService.Models
             modelBuilder.Entity<Refeicao>()
                 .HasMany<Alimento>(rf => rf.Alimentos)
                 .WithMany(a => a.Refeicoes)
-                .Map( arf =>
+                .Map(arf =>
                     {
                         arf.MapLeftKey("RefeicaoRefId");
                         arf.MapRightKey("AlimentosRefId");

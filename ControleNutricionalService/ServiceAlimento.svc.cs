@@ -17,7 +17,7 @@ namespace ControleNutricionalService {
         {
             using (NutricaoContext mde = new NutricaoContext())
             {
-                return mde.Alimentos.ToList();
+               return mde.Alimentos.ToList();
             };
         }
 
