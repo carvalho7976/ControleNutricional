@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9ad7253f-c022-46cc-84d4-e1bb57c419e8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50916/ServiceAlimento.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceAlimento.xsd" MetadataType="Schema" ID="c3bbedab-dc3f-4301-be30-eb8029973997" SourceId="1" SourceUrl="http://localhost:50916/ServiceAlimento.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceAlimento.disco" MetadataType="Disco" ID="505218e8-8e39-4a31-80cd-2e969825b0ce" SourceId="1" SourceUrl="http://localhost:50916/ServiceAlimento.svc?disco" />
+    <MetadataFile FileName="ServiceAlimento.wsdl" MetadataType="Wsdl" ID="1b3026de-9f79-4a98-b863-7770116937bd" SourceId="1" SourceUrl="http://localhost:50916/ServiceAlimento.svc?wsdl" />
+    <MetadataFile FileName="ServiceAlimento1.xsd" MetadataType="Schema" ID="e6d12e7f-2739-4fbf-8571-64b3e53b54ac" SourceId="1" SourceUrl="http://localhost:50916/ServiceAlimento.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceAlimento2.xsd" MetadataType="Schema" ID="bc483741-8675-4502-8db6-e1c54d9269c0" SourceId="1" SourceUrl="http://localhost:50916/ServiceAlimento.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceAlimento" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50916/ServiceAlimento.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50916/ServiceAlimento.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50916/ServiceAlimento.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ControleNutricionalService.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceAlimento_findall_InputMessage">
+    <wsdl:part name="parameters" element="tns:findall" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlimento_findall_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findallResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlimento_find_InputMessage">
+    <wsdl:part name="parameters" element="tns:find" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlimento_find_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlimento_create_InputMessage">
+    <wsdl:part name="parameters" element="tns:create" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlimento_create_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlimento_edit_InputMessage">
+    <wsdl:part name="parameters" element="tns:edit" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlimento_edit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlimento_delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:delete" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlimento_delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceAlimento">
+    <wsdl:operation name="findall">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAlimento/findall" message="tns:IServiceAlimento_findall_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAlimento/findallResponse" message="tns:IServiceAlimento_findall_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAlimento/find" message="tns:IServiceAlimento_find_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAlimento/findResponse" message="tns:IServiceAlimento_find_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="create">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAlimento/create" message="tns:IServiceAlimento_create_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAlimento/createResponse" message="tns:IServiceAlimento_create_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="edit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAlimento/edit" message="tns:IServiceAlimento_edit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAlimento/editResponse" message="tns:IServiceAlimento_edit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAlimento/delete" message="tns:IServiceAlimento_delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAlimento/deleteResponse" message="tns:IServiceAlimento_delete_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceAlimento" type="tns:IServiceAlimento">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findall">
+      <soap:operation soapAction="http://tempuri.org/IServiceAlimento/findall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <soap:operation soapAction="http://tempuri.org/IServiceAlimento/find" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="create">
+      <soap:operation soapAction="http://tempuri.org/IServiceAlimento/create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="edit">
+      <soap:operation soapAction="http://tempuri.org/IServiceAlimento/edit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <soap:operation soapAction="http://tempuri.org/IServiceAlimento/delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceAlimento">
+    <wsdl:port name="BasicHttpBinding_IServiceAlimento" binding="tns:BasicHttpBinding_IServiceAlimento">
+      <soap:address location="http://localhost:50916/ServiceAlimento.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

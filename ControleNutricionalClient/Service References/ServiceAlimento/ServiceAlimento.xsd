@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ControleNutricionalService.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ControleNutricionalService.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAlimento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Alimento" nillable="true" type="tns:Alimento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlimento" nillable="true" type="tns:ArrayOfAlimento" />
+  <xs:complexType name="Alimento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Acucar" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Calcio" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Cho" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Colesterol" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Ferro" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Fibra_alimentar" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Fosforo" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Gordura_trans" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Gorduras_saturadas" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Gorduras_totais" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Grupo" type="xs:int" />
+      <xs:element minOccurs="0" name="Grupo1" nillable="true" type="tns:Grupo" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Magnesio" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Monoinsaturados" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Poliinsaturados" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Porcao" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Potassio" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Proteinas" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Selenio" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Sodio" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Valor_calorico" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Vitamina_a" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Vitamina_b" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Vitamina_b1" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Vitamina_b12" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Vitamina_b2" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Vitamina_b3" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Vitamina_b6" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Vitamina_b9" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Vitamina_c" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Vitamina_d" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Vitamina_e" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Zinco" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Alimento" nillable="true" type="tns:Alimento" />
+  <xs:complexType name="Grupo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alimentos" nillable="true" type="tns:ArrayOfAlimento" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Grupo" nillable="true" type="tns:Grupo" />
+</xs:schema>
