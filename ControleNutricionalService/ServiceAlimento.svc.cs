@@ -66,15 +66,15 @@ namespace ControleNutricionalService {
             };
         }
 
-        public bool create(Alimento alimento)
-        {
+        public bool create(Alimento alimento) {
+            Debug.Write("-----------create");
             using (NutricaoContext mde = new NutricaoContext())
             {
-                try
-                {
+                try {
+                    Debug.Write("Entrou no create");
                     mde.Alimentos.Add(alimento);
                     mde.SaveChanges();
-                    Debug.Write("Entrou no create");
+                    
                     return true;
                 }
                 catch (Exception ex)

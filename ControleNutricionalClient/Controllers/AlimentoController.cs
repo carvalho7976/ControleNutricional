@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using ControleNutricionalClient.ServiceAlimento;
+using System.Diagnostics;
 namespace ControleNutricionalClient.Controllers
 {
     public class AlimentoController : ApiController
@@ -25,9 +26,10 @@ namespace ControleNutricionalClient.Controllers
 
         // POST api/alimento
         public HttpResponseMessage Post(Alimento alimento){
-            if (ModelState.IsValid) {
+            Debug.Write("create ---------------------");
+            //if (ModelState.IsValid) {
 
-                try {
+               try {
                     ServiceAlimento.ServiceAlimentoClient servico = new ServiceAlimentoClient();
                     servico.create(alimento);
                     HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, alimento);
@@ -38,10 +40,12 @@ namespace ControleNutricionalClient.Controllers
                      return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
                 }
                 
-            }
-            else {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-            }
+           // }
+            //else {
+                //Debug.Write("Not valid");
+
+               // return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            //}
         }
 
         // PUT api/alimento/5
