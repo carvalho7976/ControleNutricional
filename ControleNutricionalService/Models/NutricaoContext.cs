@@ -23,6 +23,16 @@ namespace ControleNutricionalService.Models
             var mapAlimento = modelBuilder.Entity<Alimento>();
             mapAlimento.Property(a => a.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             mapAlimento.HasKey(a => a.Id);
+
+            modelBuilder.Entity<Refeicao>()
+                .HasMany<Alimento>(rf => rf.Alimentos)
+                .WithMany(a => a.Refeicoes)
+                .Map( arf =>
+                    {
+                        arf.MapLeftKey("RefeicaoRefId");
+                        arf.MapRightKey("AlimentosRefId");
+                        arf.ToTable("RefeicaoAlimentos");
+                    });
         }
     }
 }

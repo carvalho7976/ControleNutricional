@@ -74,6 +74,7 @@
     <Compile Include="Models\Alimento.cs" />
     <Compile Include="Models\Grupo.cs" />
     <Compile Include="Models\NutricaoContext.cs" />
+    <Compile Include="Models\Refeicao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceAlimento.svc.cs">
       <DependentUpon>ServiceAlimento.svc</DependentUpon>
