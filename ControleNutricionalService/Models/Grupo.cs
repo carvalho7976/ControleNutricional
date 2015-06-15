@@ -7,12 +7,12 @@ namespace ControleNutricionalService.Models {
     public class Grupo {
 
         public Grupo() {
-            this.Alimentos = new HashSet<Alimento>();
+            this.Alimentos = new List<Alimento>();
         }
 
         public int Id { get; set; }
         public string Nome { get; set; }
 
-        public virtual ICollection<Alimento> Alimentos { get; set; }
+        public virtual List<Alimento> Alimentos { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace ControleNutricionalService.Models
         public int Id { get; set; }
         public string Descricao { get; set; }
 
-        public virtual ICollection<Alimento> Alimentos { get; set; }
+        public virtual List<Alimento> Alimentos { get; set; }
 
     }
 }

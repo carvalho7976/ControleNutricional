@@ -41,6 +41,7 @@ namespace ControleNutricionalService.Models {
         public Nullable<double> Vitamina_b12 { get; set; }
 
         public virtual Grupo Grupo1 { get; set; }
-        public virtual ICollection<Refeicao> Refeicoes { get; set; }
+        public virtual Refeicao Refeicao1 { get; set; }
+        //public virtual ICollection<Refeicao> Refeicoes { get; set; }
     }
 }

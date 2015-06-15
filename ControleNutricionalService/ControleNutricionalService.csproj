@@ -67,10 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ServiceAlimento.svc" />
+    <Content Include="ServiceRefeicao.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IServiceAlimento.cs" />
+    <Compile Include="IServiceRefeicao.cs" />
     <Compile Include="Models\Alimento.cs" />
     <Compile Include="Models\Grupo.cs" />
     <Compile Include="Models\NutricaoContext.cs" />
@@ -78,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceAlimento.svc.cs">
       <DependentUpon>ServiceAlimento.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceRefeicao.svc.cs">
+      <DependentUpon>ServiceRefeicao.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
