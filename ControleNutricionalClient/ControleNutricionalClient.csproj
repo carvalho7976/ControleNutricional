@@ -111,17 +111,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AlimentoController.cs" />
+    <Compile Include="Controllers\AlimentoRefeicaoController.cs" />
     <Compile Include="Controllers\GrupoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceAlimentoRefeicao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceAlimento\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\ServiceGrupo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceRefeicao\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -929,6 +940,16 @@
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="Service References\ServiceAlimentoRefeicao\ControleNutricionalClient.ServiceAlimentoRefeicao.AlimentoRefeicao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceAlimentoRefeicao\ServiceAlimentoRefeicao.disco" />
+    <None Include="Service References\ServiceAlimentoRefeicao\configuration91.svcinfo" />
+    <None Include="Service References\ServiceAlimentoRefeicao\configuration.svcinfo" />
+    <None Include="Service References\ServiceAlimentoRefeicao\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\ServiceAlimento\ControleNutricionalClient.ServiceAlimento.Alimento.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -946,6 +967,16 @@
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Service References\ServiceAlimentoRefeicao\ServiceAlimentoRefeicao.wsdl" />
+    <None Include="Service References\ServiceAlimentoRefeicao\ServiceAlimentoRefeicao.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAlimentoRefeicao\ServiceAlimentoRefeicao1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAlimentoRefeicao\ServiceAlimentoRefeicao2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ServiceAlimento\ServiceAlimento.disco" />
     <None Include="Service References\ServiceAlimento\configuration91.svcinfo" />
     <None Include="Service References\ServiceAlimento\configuration.svcinfo" />
@@ -960,6 +991,16 @@
     <None Include="Service References\ServiceGrupo\configuration91.svcinfo" />
     <None Include="Service References\ServiceGrupo\configuration.svcinfo" />
     <None Include="Service References\ServiceGrupo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceRefeicao\ControleNutricionalClient.ServiceRefeicao.Refeicao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceRefeicao\ServiceRefeicao.disco" />
+    <None Include="Service References\ServiceRefeicao\configuration91.svcinfo" />
+    <None Include="Service References\ServiceRefeicao\configuration.svcinfo" />
+    <None Include="Service References\ServiceRefeicao\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -988,6 +1029,16 @@
     <None Include="Service References\ServiceGrupo\SeviceGrupo2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ServiceRefeicao\ServiceRefeicao.wsdl" />
+    <None Include="Service References\ServiceRefeicao\ServiceRefeicao.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRefeicao\ServiceRefeicao1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRefeicao\ServiceRefeicao2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1000,8 +1051,10 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceAlimentoRefeicao\" />
     <WCFMetadataStorage Include="Service References\ServiceAlimento\" />
     <WCFMetadataStorage Include="Service References\ServiceGrupo\" />
+    <WCFMetadataStorage Include="Service References\ServiceRefeicao\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceAlimento\ServiceAlimento.xsd">

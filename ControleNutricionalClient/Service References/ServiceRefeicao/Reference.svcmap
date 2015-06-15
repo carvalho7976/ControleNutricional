@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="766e156d-3a5c-40fd-b73c-1adccb708c09" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50916/ServiceRefeicao.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceRefeicao.disco" MetadataType="Disco" ID="6ec3c2cb-0039-485d-aad7-912914581af2" SourceId="1" SourceUrl="http://localhost:50916/ServiceRefeicao.svc?disco" />
+    <MetadataFile FileName="ServiceRefeicao.xsd" MetadataType="Schema" ID="593dea3f-4b6c-444c-b0fe-6ed7b64bdd75" SourceId="1" SourceUrl="http://localhost:50916/ServiceRefeicao.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceRefeicao1.xsd" MetadataType="Schema" ID="fe18b6d6-336f-473e-8891-c9c08ce34673" SourceId="1" SourceUrl="http://localhost:50916/ServiceRefeicao.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceRefeicao2.xsd" MetadataType="Schema" ID="e73b81c8-b049-4473-a6c4-6bb20c512a7e" SourceId="1" SourceUrl="http://localhost:50916/ServiceRefeicao.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceRefeicao.wsdl" MetadataType="Wsdl" ID="36a70cee-8614-4a39-919d-ee0a6ee7841f" SourceId="1" SourceUrl="http://localhost:50916/ServiceRefeicao.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

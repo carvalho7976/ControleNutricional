@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceRefeicao" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50916/ServiceRefeicao.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50916/ServiceRefeicao.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50916/ServiceRefeicao.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ControleNutricionalService.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceRefeicao_findall_InputMessage">
+    <wsdl:part name="parameters" element="tns:findall" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRefeicao_findall_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findallResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRefeicao_find_InputMessage">
+    <wsdl:part name="parameters" element="tns:find" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRefeicao_find_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRefeicao_create_InputMessage">
+    <wsdl:part name="parameters" element="tns:create" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRefeicao_create_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRefeicao_edit_InputMessage">
+    <wsdl:part name="parameters" element="tns:edit" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRefeicao_edit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRefeicao_delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:delete" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRefeicao_delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceRefeicao">
+    <wsdl:operation name="findall">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRefeicao/findall" message="tns:IServiceRefeicao_findall_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRefeicao/findallResponse" message="tns:IServiceRefeicao_findall_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRefeicao/find" message="tns:IServiceRefeicao_find_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRefeicao/findResponse" message="tns:IServiceRefeicao_find_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="create">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRefeicao/create" message="tns:IServiceRefeicao_create_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRefeicao/createResponse" message="tns:IServiceRefeicao_create_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="edit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRefeicao/edit" message="tns:IServiceRefeicao_edit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRefeicao/editResponse" message="tns:IServiceRefeicao_edit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRefeicao/delete" message="tns:IServiceRefeicao_delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRefeicao/deleteResponse" message="tns:IServiceRefeicao_delete_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceRefeicao" type="tns:IServiceRefeicao">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findall">
+      <soap:operation soapAction="http://tempuri.org/IServiceRefeicao/findall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <soap:operation soapAction="http://tempuri.org/IServiceRefeicao/find" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="create">
+      <soap:operation soapAction="http://tempuri.org/IServiceRefeicao/create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="edit">
+      <soap:operation soapAction="http://tempuri.org/IServiceRefeicao/edit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <soap:operation soapAction="http://tempuri.org/IServiceRefeicao/delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceRefeicao">
+    <wsdl:port name="BasicHttpBinding_IServiceRefeicao" binding="tns:BasicHttpBinding_IServiceRefeicao">
+      <soap:address location="http://localhost:50916/ServiceRefeicao.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

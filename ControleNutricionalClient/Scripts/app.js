@@ -14,6 +14,9 @@ ControleNutricional.factory('ControleNutricional', function ($resource) {
 ControleNutricional.factory('Grupo', function ($resource) {
     return $resource('/api/grupo/:id', { Id: '@id' }, { update: { method: 'PUT' } });
 });
+ControleNutricional.factory('AlimentoRefeicao', function ($resource) {
+    return $resource('/api/alimentorefeicao/:id', { Id: '@id' }, { update: { method: 'PUT' } });
+});
 
 
 var IndexControl = function ($scope, $location, $routeParams, ControleNutricional) {
@@ -52,29 +55,43 @@ var CadastroAlimentoControl = function ($scope, $location, $routeParams, Control
     };
 };
 
-var CadastroRefeicaoControl = function ($scope, $location, $routeParams, ControleNutricional) {
+var CadastroRefeicaoControl = function ($scope, $location, $routeParams, ControleNutricional, AlimentoRefeicao) {
     var alimentos = [];
-    $scope.addItem = function () {
-        var alimento = $scope.stateSelected.name;
+   // $scope.allStates = [];
+    var estados = [];
+    $scope.allState = [];
+    $scope.search = function () {
+        ControleNutricional.query({},
+            function (data) {
+                console.log("adicionar estados");
+                $scope.allStates = data;
+                console.log($scope.allStates);
+                console.log("--------------")
+                //$scope.stateSelected = $scope.allStates[0].Nome;
+            });
+    };
+       
+   $scope.addItem = function () {
+        var alimento = $scope.stateSelected.Nome;
         if (alimento != null && alimento != '') {
             var myEl = angular.element(document.querySelector('#divAlimentos'));
             myEl.append("<br/> " + alimento);
             alimentos.push($scope.stateSelected);
         }
     };
-    $scope.saveRefeicao = function () {
-        console.log(alimentos);
+   $scope.saveRefeicao = function () {
+       //implementar       
     };
 
     $scope.getAllStates = function (callback) {
         callback($scope.allStates);
     };
-
+    //$scope.allStates
     $scope.stateSelected = function (state) {
         $scope.stateInfo = state.name + " (" + state.id + ")";
     };
-
-
-    console.log("cliquei adicionar");
-    $scope.allStates = [{ "name": "Alabama", "id": "AL" }, { "name": "Alaska", "id": "AK" }, { "name": "Abasdfa", "id": "Ac" }];
+    $scope.search();
+    console.log(estados);
+    //$scope.allStates = estados;
+   
 };

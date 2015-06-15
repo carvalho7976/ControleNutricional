@@ -26,8 +26,12 @@ namespace ControleNutricionalService
         {
             using (NutricaoContext mde = new NutricaoContext())
             {
-                int nid = Convert.ToInt32(id);
-                return mde.Refeicao.Where(ae => ae.Id == nid).First();
+               
+                    int nid = Convert.ToInt32(id);
+                    return mde.Refeicao.Where(ae => ae.Id == nid).First();
+                
+             
+                              
             };
         }
 
