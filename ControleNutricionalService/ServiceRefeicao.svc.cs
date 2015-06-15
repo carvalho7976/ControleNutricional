@@ -1,6 +1,8 @@
 ﻿using ControleNutricionalService.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -14,27 +16,80 @@ namespace ControleNutricionalService
     {
         public List<Refeicao> findall()
         {
-            throw new NotImplementedException();
+            using (NutricaoContext mde = new NutricaoContext())
+            {
+                return mde.Refeicao.ToList();
+            };
         }
 
         public Refeicao find(string id)
         {
-            throw new NotImplementedException();
+            using (NutricaoContext mde = new NutricaoContext())
+            {
+                int nid = Convert.ToInt32(id);
+                return mde.Refeicao.Where(ae => ae.Id == nid).First();
+            };
         }
 
         public bool create(Refeicao refeicao)
         {
-            throw new NotImplementedException();
+            using (NutricaoContext mde = new NutricaoContext())
+            {
+                try
+                {
+                    Debug.Write("Entrou no create");
+                    mde.Refeicao.Add(refeicao);
+                    mde.SaveChanges();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Debug.Write(ex.ToString());
+                    return false;
+                }
+            };
         }
 
         public bool edit(Refeicao refeicao)
         {
-            throw new NotImplementedException();
+            using (NutricaoContext mde = new NutricaoContext())
+            {
+                var result = mde.Refeicao.SingleOrDefault(r => r.Id == refeicao.Id);
+
+                if (result != null)
+                {
+                    //mde.Refeicao.Add(refeicao);                    
+                    mde.Entry(refeicao).State = EntityState.Modified;
+                    mde.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            };
         }
 
         public bool delete(Refeicao refeicao)
         {
-            throw new NotImplementedException();
+            using (NutricaoContext mde = new NutricaoContext())
+            {
+                var result = mde.Refeicao.Where(rf => rf.Id == refeicao.Id).SingleOrDefault();
+
+                if (result != null)
+                {
+                    mde.Refeicao.Remove(result);
+                    mde.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+
+            };
         }
     }
 }
