@@ -11,6 +11,10 @@
 ControleNutricional.factory('ControleNutricional', function ($resource) {
     return $resource('/api/alimento/:id', { Id: '@id' }, { update: { method: 'PUT' } });
 });
+ControleNutricional.factory('Grupo', function ($resource) {
+    return $resource('/api/grupo/:id', { Id: '@id' }, { update: { method: 'PUT' } });
+});
+
 
 var IndexControl = function ($scope, $location, $routeParams, ControleNutricional) {
     $scope.message = "Fulano";
@@ -24,21 +28,25 @@ var IndexControl = function ($scope, $location, $routeParams, ControleNutriciona
     };
 
 };
-var CadastroAlimentoControl = function ($scope, $location, $routeParams, ControleNutricional) {
+var CadastroAlimentoControl = function ($scope, $location, $routeParams, ControleNutricional, Grupo) {
     //pegar grupos de alimentos do banco
     //receber os parametros do form e salvar
-    $scope.grupoArray = [
-         { nome: 'Fruta', id: '1' },
-         { nome: 'Cereais',id: '2' },
-         { nome: 'Carnes', id: '3' }];
-            $scope.grupo = $scope.grupoArray[1];
-        
-            console.log($scope.grupo);
-        
+    $scope.grupoArray = [];
+    var lista;
+    $scope.search = function () {
+        Grupo.query({},
+            function (data) {
+                $scope.grupoArray = data;
+                $scope.grupo = $scope.grupoArray[0];
+            });
+    };
+    $scope.search();
+    
     $scope.save = function () {
-        console.log($scope.grupo);
-        console.log("entrou salvar");
-       ControleNutricional.save($scope.alimento, function () {
+        $scope.alimento.Grupo = $scope.grupo.Id;
+
+        console.log($scope.alimento);
+        ControleNutricional.save($scope.alimento, function () {
            $location.path('/');
         });
     };
