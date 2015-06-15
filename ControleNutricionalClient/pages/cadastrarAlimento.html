@@ -11,6 +11,8 @@
             <label class="col-md-3 control-label required">Grupo</label>
             <div class="col-md-9">
                 <input ng-model="alimento.Grupo" id="Grupo" />
+                <select ng-model="grupo" ng-options="grupo.nome for grupo in grupoArray"></select>
+            <br />
             </div>
         </div>
 

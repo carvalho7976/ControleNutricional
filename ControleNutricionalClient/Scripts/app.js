@@ -27,10 +27,19 @@ var IndexControl = function ($scope, $location, $routeParams, ControleNutriciona
 var CadastroAlimentoControl = function ($scope, $location, $routeParams, ControleNutricional) {
     //pegar grupos de alimentos do banco
     //receber os parametros do form e salvar
+    $scope.grupoArray = [
+         { nome: 'Fruta', id: '1' },
+         { nome: 'Cereais',id: '2' },
+         { nome: 'Carnes', id: '3' }];
+            $scope.grupo = $scope.grupoArray[1];
+        
+            console.log($scope.grupo);
+        
     $scope.save = function () {
+        console.log($scope.grupo);
         console.log("entrou salvar");
-        ControleNutricional.save($scope.alimento, function () {
-            $location.path('/');
+       ControleNutricional.save($scope.alimento, function () {
+           $location.path('/');
         });
     };
 };
