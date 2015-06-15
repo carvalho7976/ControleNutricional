@@ -7,15 +7,12 @@ namespace ControleNutricionalService.Models
 {
     public class Refeicao
     {
-        public Refeicao()
-        {
-            this.Alimentos = new List<Alimento>();
-        }
-
+        //public Refeicao()
+        //{
+            
+        //}
         public int Id { get; set; }
-        public string Descricao { get; set; }
-
-        public virtual List<Alimento> Alimentos { get; set; }
+        public string Descricao { get; set; }       
 
     }
 }
