@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9ea74612-1302-425e-aeaf-16285e5614b2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50916/SeviceGrupo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SeviceGrupo.xsd" MetadataType="Schema" ID="4990457e-311d-4af6-91e2-dc8a5c765e18" SourceId="1" SourceUrl="http://localhost:50916/SeviceGrupo.svc?xsd=xsd0" />
+    <MetadataFile FileName="SeviceGrupo1.xsd" MetadataType="Schema" ID="62ca661f-60de-49d8-a61b-9adb74eb1f06" SourceId="1" SourceUrl="http://localhost:50916/SeviceGrupo.svc?xsd=xsd2" />
+    <MetadataFile FileName="SeviceGrupo.disco" MetadataType="Disco" ID="556d003e-5f28-4fa0-acdd-6f7b7c73b48a" SourceId="1" SourceUrl="http://localhost:50916/SeviceGrupo.svc?disco" />
+    <MetadataFile FileName="SeviceGrupo2.xsd" MetadataType="Schema" ID="ca70d426-4d80-4706-b590-73a3bfb8fed6" SourceId="1" SourceUrl="http://localhost:50916/SeviceGrupo.svc?xsd=xsd1" />
+    <MetadataFile FileName="SeviceGrupo.wsdl" MetadataType="Wsdl" ID="8ec1d3a7-1c69-493a-8cf1-d1fe97407327" SourceId="1" SourceUrl="http://localhost:50916/SeviceGrupo.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
