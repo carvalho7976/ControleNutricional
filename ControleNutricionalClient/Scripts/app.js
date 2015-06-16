@@ -9,7 +9,8 @@
     });
 
 ControleNutricional.factory('ControleNutricional', function ($resource) {
-    return $resource('/api/alimento/:id', { Id: '@id' }, { update: { method: 'PUT' } });
+    //return $resource('/api/alimento/:id', { Id: '@id' }, { update: { method: 'PUT' } });
+    return $resource('http://localhost:50916/ServiceAlimento.svc/');
 });
 ControleNutricional.factory('Grupo', function ($resource) {
     return $resource('/api/grupo/:id', { Id: '@id' }, { update: { method: 'PUT' } });
@@ -19,14 +20,15 @@ ControleNutricional.factory('AlimentoRefeicao', function ($resource) {
 });
 
 
-var IndexControl = function ($scope, $location, $routeParams, ControleNutricional) {
+var IndexControl = function ($scope, $location, $routeParams, $http) {
+    var url = 'http://localhost:50916/ServiceAlimento.svc/';
+
     $scope.message = "Fulano";
     $scope.listarTodos = function () {
-        ControleNutricional.query({
-        },
-           function (data) {
-               console.log(data);
-           });
+
+        $http.get(url + "findall").success(function (data) {
+            console.log(data);
+        });      
 
     };
 
